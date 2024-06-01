@@ -1,17 +1,9 @@
-<h2>{{title}}!</h2>
-<ul class="products">
+<h2>{{title}}</h2>
+<div class="products">
   @for(product of products; track product.id){
-    <li class="product-item">
-      <div class="product-image">
-        <img [src]="product.image" [alt]="product.title">
-      </div>
-      <div class="product-info">
-        <h3>{{product.title}}</h3>
-        <p class="hint">
-          {{product.description}}
-        </p>
-        <p>Rate: <span>{{product.price}}</span></p>
-      </div>
-    </li>
+      <app-product
+          *ngFor="let product of products; let i = index"
+          [product]="product"
+        ></app-product>
   }
-</ul>
+</div>

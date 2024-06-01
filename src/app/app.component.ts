@@ -7,7 +7,7 @@ import {CommonModule} from "@angular/common";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ShopComponent, NgForOf, CommonModule],
+  imports: [RouterOutlet, NgForOf, CommonModule, ShopComponent],
   templateUrl: './app.component.html'
 })
 export class AppComponent{
