@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../../services/products.service";
 import {ProductListComponent} from "../../components/product-list/product-list.component";
 import {IProduct} from "../../models/product";
@@ -10,7 +10,6 @@ import {IProduct} from "../../models/product";
   templateUrl: './shop.component.html'
 })
 export class ShopComponent implements OnInit{
-  // products = inject(ProductsService)
   products: IProduct[] = []
 
   constructor(private productsService: ProductsService) {
